@@ -1,2 +1,16 @@
-node_modules/
+# macOS
 .DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*.lnk
+
+# node
+node_modules
+*.log
+
+# harp
+www
+
