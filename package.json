@@ -1,11 +1,18 @@
 {
-  "devDependencies": {
-    "gulp": "latest",
-    "gulp-minify-css": "latest",
-    "gulp-sass": "latest",
-    "gulp-slim": "^0.3.0",
-    "gulp-uglify": "latest",
-    "gulp-plumber": "latest",
-    "gulp-notify": "latest"
+  "name": "caixalote",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "harp": "^0.24.0",
+    "harp-scripts": "^0.1.1"
+  },
+  "author": "Caê Penna <caepenna@gmail.com>",
+  "scripts": {
+    "start": "harp-scripts start",
+    "dev": "harp-scripts watch",
+    "test": "harp-scripts test",
+    "compile": "harp-scripts compile",
+    "win32-start": "harp server",
+    "win32-compile": "harp compile"
   }
 }
