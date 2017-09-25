@@ -42,8 +42,10 @@ html
       section#e
         h1 Contato
         p Quinta seção
-        input type="text"
-        textarea
+        form method="POST" action="http://formspree.io/caepenna@gmail.com"
+          input type="email" name="email" placeholder="Seu email"
+          textarea name="message" placeholder="Sua mensagem"
+          button type="submit" Send
 
     script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
     script src="js/scripts.js"
