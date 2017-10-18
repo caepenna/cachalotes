@@ -23,7 +23,7 @@
 }
 
 ::selection {
-  background-color: rgba(98, 46, 136, 0.4);
+  background-color: rgba(102, 51, 153, 0.4);
 }
 
 html {
@@ -264,7 +264,7 @@ body > main > section {
 }
 
 .cach-header {
-  background-color: #622E88;
+  background-color: #639;
   position: fixed;
   top: 0;
   left: 0;
