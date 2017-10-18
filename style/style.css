@@ -51,6 +51,10 @@ main {
   font-feature-settings: "liga1" on;
 }
 
+button {
+  cursor: pointer;
+}
+
 * + * {
   margin-top: 1rem;
 }
@@ -270,4 +274,58 @@ body > main > section {
   left: 0;
   right: 0;
   display: flex;
+}
+
+.cach-button {
+  display: inline-block;
+  text-align: center;
+  margin: 4rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, transparent calc(2% * 5), #fff calc(2% * 5));
+  position: relative;
+  transition: background-size 0.3s ease, color 0.15s ease;
+  transition-delay: 0s, 0.45s;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: #639;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.cach-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: linear-gradient(135deg, transparent calc(1% * 5), #afeeee calc(1% * 5));
+  z-index: -1;
+  background-size: 100%;
+  transition: background-size 0.15s ease;
+  transition-delay: 0.45s;
+}
+
+.cach-button::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  right: -1px;
+  left: -1px;
+  background: linear-gradient(135deg, transparent calc(1% * 5), #639 calc(1% * 5));
+  z-index: -2;
+}
+
+.cach-button:hover {
+  background-size: calc(6000% / 5);
+}
+
+.cach-button:active {
+  color: #fff;
+  transition-delay: 0s;
+}
+
+.cach-button:active::after {
+  background-size: calc(12000% / 5);
+  transition-delay: 0s;
 }
