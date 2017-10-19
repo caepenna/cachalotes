@@ -1,7 +1,27 @@
 .cach-header
+  $height: 3rem
   background-color: $color-base
+  height: 3rem
   position: fixed
   top: 0
   left: 0
   right: 0
   display: flex
+  justify-content: center
+
+  > .container
+    @extend %container
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    > *
+      margin-top: 0
+
+    +media-mediumup
+      > .toggle-menu
+        display: none
+
+    +media-mediumdown
+      > .navigation-menu
+        display: none

@@ -13,6 +13,7 @@
   border: none;
   outline: none;
   font-family: inherit;
+  background: none;
 }
 
 *:focus {
@@ -20,6 +21,11 @@
   outline-offset: 2px;
   outline-style: solid;
   outline-width: 2px;
+}
+
+.cach-header > .container {
+  width: calc(50% + 16rem);
+  max-width: calc(100% - 3rem);
 }
 
 ::selection {
@@ -252,30 +258,6 @@ body > main > section {
   margin-right: auto;
 }
 
-.navigation-menu {
-  width: 100%;
-  height: 3rem;
-  display: flex;
-}
-
-.navigation-menu > * {
-  font-weight: 400;
-}
-
-.navigation-menu > .-active {
-  color: red;
-  font-weight: 700;
-}
-
-.cach-header {
-  background-color: #639;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-}
-
 .cach-button {
   display: inline-block;
   text-align: center;
@@ -328,4 +310,98 @@ body > main > section {
 .cach-button:active::after {
   background-size: calc(12000% / 5);
   transition-delay: 0s;
+}
+
+.cach-header {
+  background-color: #639;
+  height: 3rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.cach-header > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cach-header > .container > * {
+  margin-top: 0;
+}
+
+@media (min-width: 961px) {
+  .cach-header > .container > .toggle-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 960px) {
+  .cach-header > .container > .navigation-menu {
+    display: none;
+  }
+}
+
+.navigation-menu {
+  display: flex;
+}
+
+.navigation-menu > * {
+  font-weight: 400;
+}
+
+.navigation-menu > .-active {
+  color: red;
+  font-weight: 700;
+}
+
+.toggle-menu {
+  font-size: 16px;
+  width: 2em;
+  height: 2em;
+  position: relative;
+  color: #fff;
+  cursor: pointer;
+}
+
+.toggle-menu:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.toggle-menu:before, .toggle-menu:after {
+  content: '';
+  width: 1em;
+  height: 0.125em;
+  background-color: currentColor;
+  display: block;
+  position: absolute;
+  transition: all 0.2s linear;
+}
+
+.toggle-menu:before {
+  top: 0.625em;
+  left: 0.5em;
+  box-shadow: 0 0.3125em 0 0 currentColor;
+}
+
+.toggle-menu:after {
+  top: 1.25em;
+  left: 0.5em;
+}
+
+.toggle-menu.-x:before, .toggle-menu.-x:after {
+  top: 0.9375em;
+  left: 0.5em;
+}
+
+.toggle-menu.-x:before {
+  transform: rotate(45deg);
+  box-shadow: 0 0 0 0 transparent;
+}
+
+.toggle-menu.-x:after {
+  transform: rotate(-45deg);
 }
