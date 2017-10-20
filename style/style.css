@@ -17,56 +17,19 @@
 }
 
 *:focus {
-  outline-color: rgba(51, 102, 204, 0.4);
-  outline-offset: 2px;
-  outline-style: solid;
-  outline-width: 2px;
+  outline: none;
 }
 
-.cach-header > .container {
+section, .cach-header > .container {
   width: calc(50% + 16rem);
   max-width: calc(100% - 3rem);
-}
-
-::selection {
-  background-color: rgba(102, 51, 153, 0.4);
-}
-
-html {
-  font-size: 16px;
-  font-family: "Bitter", serif;
-  font-weight: 400;
-  height: 100%;
-}
-
-* {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 main {
-  padding: 1rem;
-  margin-right: auto;
-  margin-left: auto;
-  padding-top: 1rem;
-  padding-bottom: 3rem;
-  width: 66ch;
-  max-width: 90%;
   font-variant-numeric: oldstyle-nums;
   font-feature-settings: "liga1" on;
-}
-
-button {
-  cursor: pointer;
-}
-
-* + * {
-  margin-top: 1rem;
-}
-
-body, body > main {
-  margin: 0;
 }
 
 main,
@@ -248,14 +211,39 @@ pre {
   }
 }
 
-body > main > section {
-  padding-top: 4.5rem;
-  padding-bottom: 4.5rem;
-  min-height: 50vh;
-  width: calc(25vw + 40rem);
-  max-width: calc(100vw - 4rem);
-  margin-left: auto;
-  margin-right: auto;
+::selection {
+  background-color: rgba(102, 51, 153, 0.4);
+}
+
+html {
+  font-size: 16px;
+  font-family: "Bitter", serif;
+  font-weight: 400;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+* + * {
+  margin-top: 1rem;
+}
+
+main {
+  padding-top: 4rem;
+}
+
+section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  min-height: 90vh;
 }
 
 .cach-button {
@@ -314,7 +302,7 @@ body > main > section {
 
 .cach-header {
   background-color: #639;
-  height: 3rem;
+  height: 4rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -359,12 +347,14 @@ body > main > section {
 }
 
 .toggle-menu {
-  font-size: 16px;
+  font-size: 24px;
   width: 2em;
   height: 2em;
   position: relative;
   color: #fff;
   cursor: pointer;
+  transition: transform 0.4s ease;
+  border-radius: 50%;
 }
 
 .toggle-menu:hover {
@@ -390,6 +380,10 @@ body > main > section {
 .toggle-menu:after {
   top: 1.25em;
   left: 0.5em;
+}
+
+.toggle-menu.-x {
+  transform: rotate(180deg);
 }
 
 .toggle-menu.-x:before, .toggle-menu.-x:after {

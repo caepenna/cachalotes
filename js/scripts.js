@@ -29,3 +29,10 @@ nav.find('a').on('click', function () {
   
   return false;
 });
+
+$(document).ready(function(){
+  $('.toggle-menu').on('click', function(){
+    $(this).toggleClass('-x');
+    $('.navigation-menu').toggleClass('-open');
+  });
+});

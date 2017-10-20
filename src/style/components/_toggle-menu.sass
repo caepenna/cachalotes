@@ -1,14 +1,16 @@
 .toggle-menu 
   $color: #fff
 
-  font-size: 16px
+  font-size: 24px
   
   width: 2em
   height: 2em
   position: relative
   color: $color
   cursor: pointer
-    
+  transition: transform 0.4s ease;
+  border-radius: 50%;
+
   &:hover 
     background-color: rgba(#000, 0.2)
   
@@ -32,6 +34,8 @@
     left: 0.5em
   
   &.-x 
+
+    transform: rotate(180deg);
 
     &:before,
     &:after 
