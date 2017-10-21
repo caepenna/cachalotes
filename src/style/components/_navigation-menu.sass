@@ -1,9 +1,36 @@
 .navigation-menu
   display: flex
 
-  > *
+  > a
     font-weight: 400
+    color: #fff
+    background: none
 
-  > .-active
-    color: red
-    font-weight: 700
+    &.-active
+      font-weight: 700
+      color: $color-highlight
+
+    &:hover
+      color: $color-highlight
+      +underline(2px)
+  
+  +media-mediumup
+    > a
+      margin: 0
+      margin-left: 2rem
+  
+  +media-mediumdown
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    height: 0
+    overflow-y: hidden
+    transition: height 0.4s ease
+    z-index: -1
+    position: fixed
+    top: 0
+    left: 0
+    width: 100vw
+    background-color: $color-base
+    &.-open
+      height: 100vh

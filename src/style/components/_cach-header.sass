@@ -1,5 +1,6 @@
 .cach-header
   $height: $space-header-height
+  $height-small: $space-header-heigh-small
   background-color: $color-base
   height: $height
   position: fixed
@@ -8,6 +9,11 @@
   right: 0
   display: flex
   justify-content: center
+  transition: height 0.3s ease
+  box-shadow: 0 2px 8px rgba(#000, 0.4)
+
+  &.-small
+    height: $height-small
 
   > .container
     @extend %container
@@ -20,8 +26,4 @@
 
     +media-mediumup
       > .toggle-menu
-        display: none
-
-    +media-mediumdown
-      > .navigation-menu
         display: none

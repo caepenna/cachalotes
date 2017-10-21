@@ -13,7 +13,6 @@ $(window).on('scroll', function () {
       nav.find('a').removeClass('-active');
       sections.removeClass('-active');
       
-      $(this).addClass('-active');
       nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('-active');
     }
   });
@@ -35,4 +34,17 @@ $(document).ready(function(){
     $(this).toggleClass('-x');
     $('.navigation-menu').toggleClass('-open');
   });
+  $('.navigation-menu > a').on('click', function(){
+    $('.navigation-menu').removeClass('-open');
+  });
+});
+
+$(document).on('scroll', function() {
+
+  if($(document).scrollTop()>96) {
+    $('.cach-header').addClass('-small');
+  } else {
+    $('header').removeClass('-small');
+  }
+  
 });
