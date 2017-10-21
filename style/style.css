@@ -346,20 +346,23 @@ section:last-child {
 .navigation-menu > a.-active {
   font-weight: 700;
   color: #afeeee;
+  line-height: 0.9;
 }
 
 .navigation-menu > a:hover {
   color: #afeeee;
+  text-shadow: 0.1em 0 0 #639, 0.2em 0 0 #639, -0.1em 0 0 #639, -0.2em 0 0 #639;
   background: linear-gradient(currentcolor, currentcolor);
   background-size: 1px 1px;
   background-repeat: repeat-x;
-  background-position: 100% calc(100% - 2px);
+  background-position: 100% calc(100% - 0px);
 }
 
 @media (min-width: 961px) {
   .navigation-menu > a {
     margin: 0;
     margin-left: 2rem;
+    line-height: 1;
   }
 }
 

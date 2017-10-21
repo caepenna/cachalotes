@@ -9,15 +9,18 @@
     &.-active
       font-weight: 700
       color: $color-highlight
+      line-height: 0.9
 
     &:hover
       color: $color-highlight
-      +underline(2px)
+      text-shadow: 0.1em 0 0 $color-base, 0.2em 0 0 $color-base, -0.1em 0 0 $color-base, -0.2em 0 0 $color-base
+      +underline(0px)
   
   +media-mediumup
     > a
       margin: 0
       margin-left: 2rem
+      line-height: 1
   
   +media-mediumdown
     flex-direction: column
