@@ -300,6 +300,10 @@ section:last-child {
   transition-delay: 0s;
 }
 
+.cach-section {
+  color: #639;
+}
+
 .cach-header {
   background-color: #639;
   height: 4.5rem;
@@ -341,6 +345,7 @@ section:last-child {
   font-weight: 400;
   color: #fff;
   background: none;
+  transition: color 0.3s ease;
 }
 
 .navigation-menu > a.-active {
@@ -352,7 +357,7 @@ section:last-child {
 .navigation-menu > a:hover {
   color: #afeeee;
   text-shadow: 0.1em 0 0 #639, 0.2em 0 0 #639, -0.1em 0 0 #639, -0.2em 0 0 #639;
-  background: linear-gradient(currentcolor, currentcolor);
+  background: linear-gradient(#afeeee, #afeeee);
   background-size: 1px 1px;
   background-repeat: repeat-x;
   background-position: 100% calc(100% - 0px);
@@ -379,7 +384,7 @@ section:last-child {
     left: 0;
     width: 100vw;
     background-color: #639;
-    transition: height 0.4s ease;
+    transition: color 0.3s ease, height 0.4s ease;
   }
   .navigation-menu > a {
     opacity: 0;
