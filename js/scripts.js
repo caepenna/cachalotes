@@ -1,5 +1,5 @@
 var sections = $('section')
-  , nav = $('nav')
+  , nav = $('.cach-header')
   , navHeight = nav.outerHeight();
 
 $(window).on('scroll', function () {

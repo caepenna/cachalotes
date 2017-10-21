@@ -20,8 +20,8 @@
   outline: none;
 }
 
-section, .cach-header > .container {
-  width: calc(50% + 16rem);
+.cach-section > .container, .cach-header > .container {
+  width: calc(40% + 12rem);
   max-width: calc(100% - 3rem);
   margin-right: auto;
   margin-left: auto;
@@ -237,6 +237,7 @@ button {
 }
 
 section {
+  margin: 0;
   padding-top: 7.5rem;
   padding-bottom: 3rem;
   min-height: 90vh;
@@ -304,6 +305,31 @@ section:last-child {
   color: #639;
 }
 
+.cach-section > .container > .title {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.cach-section.-home {
+  background-color: #fff;
+}
+
+.cach-section.-oque {
+  background-color: gold;
+}
+
+.cach-section.-como {
+  background-color: wheat;
+}
+
+.cach-section.-quem {
+  background-color: cyan;
+}
+
+.cach-section.-contato {
+  background-color: pink;
+}
+
 .cach-header {
   background-color: #639;
   height: 4.5rem;
@@ -315,6 +341,7 @@ section:last-child {
   justify-content: center;
   transition: height 0.3s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  z-index: 3;
 }
 
 .cach-header.-small {
@@ -389,6 +416,16 @@ section:last-child {
   .navigation-menu > a {
     opacity: 0;
     transition: opacity 0.4s ease;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+  .navigation-menu > a:hover {
+    background: linear-gradient(#afeeee, #afeeee);
+    background-size: 2px 2px;
+    background-repeat: repeat-x;
+    background-position: 100% calc(100% - calc(1rem + 2px));
   }
   .navigation-menu.-open {
     height: 100vh;

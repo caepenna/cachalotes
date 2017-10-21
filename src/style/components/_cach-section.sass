@@ -1,2 +1,20 @@
 .cach-section
   color: $color-base
+
+  > .container 
+    @extend %container
+
+    > .title
+      font-weight: 400
+      font-style: italic
+
+  &.-home
+    background-color: #fff
+  &.-oque
+    background-color: gold
+  &.-como
+    background-color: wheat
+  &.-quem
+    background-color: cyan
+  &.-contato
+    background-color: pink
