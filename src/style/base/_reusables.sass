@@ -4,8 +4,8 @@
   margin-right: auto
   margin-left: auto
 
-=underline($offset: 0px, $width: 1px)
-  background: linear-gradient(currentcolor, currentcolor)
+=underline($offset: 0px, $width: 1px, $color: currentcolor)
+  background: linear-gradient($color, $color)
   background-size: $width $width
   background-repeat: repeat-x
   background-position: 100% calc(100% - #{$offset})

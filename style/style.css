@@ -373,16 +373,23 @@ section:last-child {
     justify-content: center;
     height: 0;
     overflow-y: hidden;
-    transition: height 0.4s ease;
     z-index: -1;
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     background-color: #639;
+    transition: height 0.4s ease;
+  }
+  .navigation-menu > a {
+    opacity: 0;
+    transition: opacity 0.4s ease;
   }
   .navigation-menu.-open {
     height: 100vh;
+  }
+  .navigation-menu.-open > a {
+    opacity: 1;
   }
 }
 

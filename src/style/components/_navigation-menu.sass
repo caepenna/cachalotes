@@ -5,6 +5,7 @@
     font-weight: 400
     color: #fff
     background: none
+    transition: color 0.3s ease
 
     &.-active
       font-weight: 700
@@ -14,8 +15,8 @@
     &:hover
       color: $color-highlight
       text-shadow: 0.1em 0 0 $color-base, 0.2em 0 0 $color-base, -0.1em 0 0 $color-base, -0.2em 0 0 $color-base
-      +underline(0px)
-  
+      +underline(0px, 1px, $color-highlight)
+
   +media-mediumup
     > a
       margin: 0
@@ -28,12 +29,17 @@
     justify-content: center
     height: 0
     overflow-y: hidden
-    transition: height 0.4s ease
     z-index: -1
     position: fixed
     top: 0
     left: 0
     width: 100vw
     background-color: $color-base
+    transition: color 0.3s ease, height 0.4s ease
+    > a
+      opacity: 0
+      transition: opacity 0.4s ease
     &.-open
       height: 100vh
+      > a
+        opacity: 1
