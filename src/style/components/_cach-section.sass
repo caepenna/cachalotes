@@ -1,8 +1,27 @@
 .cach-section
-  $size-bevel: 100px
-  $size-stripe: 10px
-  
+  $size-stripe: 1rem
+  $size-bevel: 24rem
+  $padding-vertical: 36rem
+  $padding-vertical-desktop: 24rem
+
   color: $color-base
+  margin: 0
+  padding-top: $space-deca + $space-header-height
+  min-height: 90vh
+  padding-bottom: $padding-vertical
+  padding-top: $padding-vertical
+  +media-mediumup
+    padding-bottom: $padding-vertical-desktop
+    padding-top: $padding-vertical-desktop
+    
+  &:first-child
+    padding-top: $padding-vertical / 3
+    padding-bottom: $padding-vertical / 3
+    max-height: 90vh
+    background-size: 999vh
+
+  &:last-child
+    min-height: 100vh
 
   > .container 
     @extend %container
@@ -16,11 +35,17 @@
   &.-oque
     $color-bg: $color-highlight
     $color-stripe: $color-base
-    background: linear-gradient(135deg, transparent $size-bevel, $color-stripe $size-bevel, $color-stripe calc(#{$size-bevel} + #{$size-stripe}), $color-bg calc(#{$size-bevel} + #{$size-stripe}))
-    background-color: gold
+    background: linear-gradient(135deg, transparent $size-bevel, $color-stripe $size-bevel, $color-stripe calc(#{$size-bevel} + #{$size-stripe}), $color-bg calc(#{$size-bevel} + #{$size-stripe}), $color-bg)
   &.-como
-    background-color: wheat
+    $color-bg: #fff
+    $color-stripe: $color-base
+    background: linear-gradient(135deg, transparent $size-bevel, $color-stripe $size-bevel, $color-stripe calc(#{$size-bevel} + #{$size-stripe}), $color-bg calc(#{$size-bevel} + #{$size-stripe}), $color-bg)
   &.-quem
-    background-color: cyan
+    $color-bg: $color-base
+    $color-stripe: #fff
+    background: linear-gradient(135deg, transparent $size-bevel, $color-stripe $size-bevel, $color-stripe calc(#{$size-bevel} + #{$size-stripe}), $color-bg calc(#{$size-bevel} + #{$size-stripe}), $color-bg)
+    color: #fff
   &.-contato
-    background-color: pink
+    $color-bg: #fff
+    $color-stripe: $color-highlight
+    background: linear-gradient(135deg, transparent $size-bevel, $color-stripe $size-bevel, $color-stripe calc(#{$size-bevel} + #{$size-stripe}), $color-bg calc(#{$size-bevel} + #{$size-stripe}), $color-bg)

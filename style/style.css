@@ -236,17 +236,6 @@ button {
   margin-top: 1rem;
 }
 
-section {
-  margin: 0;
-  padding-top: 7.5rem;
-  padding-bottom: 3rem;
-  min-height: 90vh;
-}
-
-section:last-child {
-  min-height: 100vh;
-}
-
 .cach-button {
   display: inline-block;
   text-align: center;
@@ -303,6 +292,29 @@ section:last-child {
 
 .cach-section {
   color: #639;
+  margin: 0;
+  padding-top: 7.5rem;
+  min-height: 90vh;
+  padding-bottom: 36rem;
+  padding-top: 36rem;
+}
+
+@media (min-width: 961px) {
+  .cach-section {
+    padding-bottom: 24rem;
+    padding-top: 24rem;
+  }
+}
+
+.cach-section:first-child {
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+  max-height: 90vh;
+  background-size: 999vh;
+}
+
+.cach-section:last-child {
+  min-height: 100vh;
 }
 
 .cach-section > .container > .title {
@@ -315,20 +327,20 @@ section:last-child {
 }
 
 .cach-section.-oque {
-  background: linear-gradient(135deg, transparent 100px, #639 100px, #639 calc(100px + 10px), #afeeee calc(100px + 10px));
-  background-color: gold;
+  background: linear-gradient(135deg, transparent 24rem, #639 24rem, #639 calc(24rem + 1rem), #afeeee calc(24rem + 1rem), #afeeee);
 }
 
 .cach-section.-como {
-  background-color: wheat;
+  background: linear-gradient(135deg, transparent 24rem, #639 24rem, #639 calc(24rem + 1rem), #fff calc(24rem + 1rem), #fff);
 }
 
 .cach-section.-quem {
-  background-color: cyan;
+  background: linear-gradient(135deg, transparent 24rem, #fff 24rem, #fff calc(24rem + 1rem), #639 calc(24rem + 1rem), #639);
+  color: #fff;
 }
 
 .cach-section.-contato {
-  background-color: pink;
+  background: linear-gradient(135deg, transparent 24rem, #afeeee 24rem, #afeeee calc(24rem + 1rem), #fff calc(24rem + 1rem), #fff);
 }
 
 .cach-header {
