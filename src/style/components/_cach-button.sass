@@ -1,18 +1,18 @@
 .cach-button
-  $bevel-size: 5
+  $size-bg: 5
   $color-main: $color-base
   $color-hover: $color-highlight
   $color-bg: #fff
-  $active-delay: 0.45s
+  $delay-active: 0.45s
 
   display: inline-block
   text-align: center
   margin: 4rem
   padding: 1rem 2rem
-  background: linear-gradient(135deg, transparent calc(2% * #{$bevel-size}), $color-bg calc(2% * #{$bevel-size}))
+  background: linear-gradient(135deg, transparent calc(2% * #{$size-bg}), $color-bg calc(2% * #{$size-bg}))
   position: relative
   transition: background-size 0.3s ease, color 0.15s ease
-  transition-delay: 0s, $active-delay
+  transition-delay: 0s, $delay-active
   background-size: 100%
   background-repeat: no-repeat
   color: $color-main
@@ -25,11 +25,11 @@
     bottom: 0
     right: 0
     left: 0
-    background: linear-gradient(135deg, transparent calc(1% * #{$bevel-size}), $color-hover calc(1% * #{$bevel-size}))
+    background: linear-gradient(135deg, transparent calc(1% * #{$size-bg}), $color-hover calc(1% * #{$size-bg}))
     z-index: -1
     background-size: 100%
     transition: background-size 0.15s ease
-    transition-delay: $active-delay
+    transition-delay: $delay-active
   
   &::before
     content: ''
@@ -38,15 +38,15 @@
     bottom: -1px
     right: -1px
     left: -1px
-    background: linear-gradient(135deg, transparent calc(1% * #{$bevel-size}), $color-main calc(1% * #{$bevel-size}))
+    background: linear-gradient(135deg, transparent calc(1% * #{$size-bg}), $color-main calc(1% * #{$size-bg}))
     z-index: -2
 
   &:hover
-    background-size: calc(6000% / #{$bevel-size})
+    background-size: calc(6000% / #{$size-bg})
 
   &:active
     color: $color-bg
     transition-delay: 0s
     &::after
-      background-size: calc(12000% / #{$bevel-size})
+      background-size: calc(12000% / #{$size-bg})
       transition-delay: 0s

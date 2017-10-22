@@ -315,6 +315,7 @@ section:last-child {
 }
 
 .cach-section.-oque {
+  background: linear-gradient(135deg, transparent 100px, #639 100px, #639 calc(100px + 10px), #afeeee calc(100px + 10px));
   background-color: gold;
 }
 
