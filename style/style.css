@@ -460,7 +460,7 @@ button {
   border-radius: 50%;
 }
 
-.toggle-menu:focus {
+.toggle-menu:active {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
