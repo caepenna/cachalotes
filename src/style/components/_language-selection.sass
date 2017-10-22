@@ -1,3 +1,20 @@
 .language-selection
   display: flex
   justify-content: left
+
+  > a
+    color: rgba(#000, 0.4)
+    margin: 0
+    margin-left: 1rem
+    line-height: 1
+    background: none
+
+    &:hover
+      color: $color-base
+      transition: color 0.3s ease
+      +underline(0px, 2px, $color-base)
+      +underline-cut
+
+    &.-active
+      color: $color-base
+

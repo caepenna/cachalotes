@@ -14,8 +14,8 @@
 
     &:hover
       color: $color-highlight
-      text-shadow: 0.1em 0 0 $color-base, 0.2em 0 0 $color-base, -0.1em 0 0 $color-base, -0.2em 0 0 $color-base
       +underline(0px, 1px, $color-highlight)
+      +underline-cut($color-base)
 
   +media-mediumup
     > a

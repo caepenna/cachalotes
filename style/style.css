@@ -252,7 +252,7 @@ body, main {
   background-repeat: no-repeat;
   color: #639;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
-  z-index: 2;
+  z-index: 4;
 }
 
 .cach-button::after {
@@ -299,6 +299,8 @@ body, main {
   min-height: 90vh;
   padding-bottom: 36rem;
   padding-top: 36rem;
+  position: relative;
+  z-index: 2;
 }
 
 @media (min-width: 961px) {
@@ -322,7 +324,7 @@ body, main {
 
 .cach-section:first-child > .container > .language-selection {
   position: absolute;
-  top: 4.5rem;
+  top: 5.5rem;
   right: 0;
 }
 
@@ -382,7 +384,7 @@ body, main {
   justify-content: center;
   transition: height 0.3s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-  z-index: 3;
+  z-index: 6;
 }
 
 .cach-header.-small {
@@ -424,11 +426,11 @@ body, main {
 
 .navigation-menu > a:hover {
   color: #afeeee;
-  text-shadow: 0.1em 0 0 #639, 0.2em 0 0 #639, -0.1em 0 0 #639, -0.2em 0 0 #639;
   background: linear-gradient(#afeeee, #afeeee);
   background-size: 1px 1px;
   background-repeat: repeat-x;
   background-position: 100% calc(100% - 0px);
+  text-shadow: 0.1em 0 0 #639, 0.2em 0 0 #639, -0.1em 0 0 #639, -0.2em 0 0 #639;
 }
 
 @media (min-width: 961px) {
@@ -539,4 +541,26 @@ body, main {
 .language-selection {
   display: flex;
   justify-content: left;
+}
+
+.language-selection > a {
+  color: rgba(0, 0, 0, 0.4);
+  margin: 0;
+  margin-left: 1rem;
+  line-height: 1;
+  background: none;
+}
+
+.language-selection > a:hover {
+  color: #639;
+  transition: color 0.3s ease;
+  background: linear-gradient(#639, #639);
+  background-size: 2px 2px;
+  background-repeat: repeat-x;
+  background-position: 100% calc(100% - 0px);
+  text-shadow: 0.1em 0 0 #fff, 0.2em 0 0 #fff, -0.1em 0 0 #fff, -0.2em 0 0 #fff;
+}
+
+.language-selection > a.-active {
+  color: #639;
 }

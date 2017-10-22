@@ -10,6 +10,9 @@
   min-height: 90vh
   padding-bottom: $padding-vertical
   padding-top: $padding-vertical
+  position: relative
+  z-index: 2
+
   +media-mediumup
     padding-bottom: $padding-vertical-desktop
     padding-top: $padding-vertical-desktop
@@ -26,7 +29,7 @@
 
       > .language-selection
         position: absolute
-        top: $space-header-height
+        top: 1rem + $space-header-height
         right: 0
 
       > h1
@@ -48,18 +51,23 @@
 
   &.-home
     background-color: #fff
+
+
   &.-oque
     $color-bg: $color-highlight
     $color-stripe: $color-base
     background: linear-gradient(135deg, transparent $size-bevel, $color-stripe $size-bevel, $color-stripe calc(#{$size-bevel} + #{$size-stripe}), $color-bg calc(#{$size-bevel} + #{$size-stripe}), $color-bg)
+
   &.-como
     $color-bg: #fff
     $color-stripe: $color-base
     background: linear-gradient(135deg, transparent $size-bevel, $color-stripe $size-bevel, $color-stripe calc(#{$size-bevel} + #{$size-stripe}), $color-bg calc(#{$size-bevel} + #{$size-stripe}), $color-bg)
+
   &.-quem
     $color-bg: $color-base
     $color-stripe: #fff
     background: linear-gradient(135deg, transparent $size-bevel, $color-stripe $size-bevel, $color-stripe calc(#{$size-bevel} + #{$size-stripe}), $color-bg calc(#{$size-bevel} + #{$size-stripe}), $color-bg)
+
     color: #fff
   &.-contato
     $color-bg: #fff
