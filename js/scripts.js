@@ -35,6 +35,7 @@ $(document).ready(function(){
     $('.navigation-menu').toggleClass('-open');
   });
   $('.navigation-menu > a').on('click', function(){
+    $('.toggle-menu').removeClass('-x');
     $('.navigation-menu').removeClass('-open');
   });
 });
