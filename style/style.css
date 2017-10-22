@@ -513,3 +513,11 @@ button {
 .toggle-menu.-x:after {
   transform: rotate(-45deg);
 }
+
+.language-selection {
+  position: absolute;
+  top: 4.5rem;
+  right: 0;
+  display: flex;
+  justify-content: left;
+}
