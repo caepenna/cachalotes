@@ -236,6 +236,10 @@ button {
   margin-top: 1rem;
 }
 
+body, main {
+  margin: 0;
+}
+
 .cach-button {
   display: inline-block;
   text-align: center;
@@ -307,8 +311,26 @@ button {
 .cach-section:first-child {
   padding-top: 0;
   padding-bottom: 0;
-  max-height: 90vh;
+  height: 90vh;
   background-size: 999vh;
+}
+
+.cach-section:first-child > .container {
+  position: relative;
+  height: 100%;
+}
+
+.cach-section:first-child > .container > .language-selection {
+  position: absolute;
+  top: 4.5rem;
+  right: 0;
+}
+
+.cach-section:first-child > .container > h1 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .cach-section:last-child {
@@ -515,9 +537,6 @@ button {
 }
 
 .language-selection {
-  position: absolute;
-  top: 4.5rem;
-  right: 0;
   display: flex;
   justify-content: left;
 }
