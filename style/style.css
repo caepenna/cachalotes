@@ -20,7 +20,7 @@
   outline: none;
 }
 
-.cach-section > .container, .cach-header > .container {
+.cach-section > .container, .cach-footer > .container, .cach-header > .container {
   width: calc(40% + 12rem);
   max-width: calc(100% - 3rem);
   margin-right: auto;
@@ -315,7 +315,7 @@ button {
 
 .cach-section:last-child {
   min-height: 100vh;
-  padding-bottom: 40vh;
+  padding-bottom: 4.5rem;
 }
 
 .cach-section > .container > .title {
@@ -342,6 +342,13 @@ button {
 
 .cach-section.-contato {
   background: linear-gradient(135deg, transparent 24rem, #afeeee 24rem, #afeeee calc(24rem + 1rem), #fff calc(24rem + 1rem), #fff);
+}
+
+.cach-footer {
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+  background-color: #639;
+  color: #fff;
 }
 
 .cach-header {
