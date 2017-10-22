@@ -3,50 +3,49 @@
   $color-main: $color-base
   $color-hover: $color-highlight
   $color-bg: #fff
-  $delay-active: 0.45s
 
   display: inline-block
   text-align: center
   margin: 4rem
   padding: 1rem 2rem
-  background: linear-gradient(135deg, transparent calc(2% * #{$size-bg}), $color-bg calc(2% * #{$size-bg}))
+  background: linear-gradient(135deg, transparent calc(1% * #{$size-bg}), $color-main calc(1% * #{$size-bg}))
   position: relative
   transition: background-size 0.3s ease, color 0.15s ease
-  transition-delay: 0s, $delay-active
   background-size: 100%
   background-repeat: no-repeat
   color: $color-main
   box-shadow: 4px 4px 4px rgba(#000, 0.2)
+  z-index: 2
 
   &::after
     content: ''
     position: absolute
-    top: 0
-    bottom: 0
-    right: 0
-    left: 0
-    background: linear-gradient(135deg, transparent calc(1% * #{$size-bg}), $color-hover calc(1% * #{$size-bg}))
+    top: 1px
+    bottom: 1px
+    right: 1px
+    left: 1px
+    background: linear-gradient(135deg, transparent calc(2% * #{$size-bg}), $color-bg calc(2% * #{$size-bg}))
     z-index: -1
     background-size: 100%
     transition: background-size 0.15s ease
-    transition-delay: $delay-active
   
   &::before
     content: ''
     position: absolute
-    top: -1px
-    bottom: -1px
-    right: -1px
-    left: -1px
-    background: linear-gradient(135deg, transparent calc(1% * #{$size-bg}), $color-main calc(1% * #{$size-bg}))
+    top: 1px
+    bottom: 1px
+    right: 1px
+    left: 1px
+    background: linear-gradient(135deg, transparent calc(1% * #{$size-bg}), $color-hover calc(1% * #{$size-bg}))
     z-index: -2
+    transition: background-size 0.15s ease
 
-  &:hover
-    background-size: calc(6000% / #{$size-bg})
+  &:hover,
+  &:active
+    &::after
+      background-size: calc(6000% / #{$size-bg})
 
   &:active
     color: $color-bg
-    transition-delay: 0s
-    &::after
+    &::before
       background-size: calc(12000% / #{$size-bg})
-      transition-delay: 0s
