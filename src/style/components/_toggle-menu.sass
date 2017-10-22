@@ -11,8 +11,11 @@
   transition: transform 0.4s ease;
   border-radius: 50%;
 
-  &:hover 
+  &:focus
     background-color: rgba(#000, 0.2)
+  +media-mediumup
+    &:hover 
+      background-color: rgba(#000, 0.2)
   
   &:before,
   &:after 

@@ -315,6 +315,7 @@ button {
 
 .cach-section:last-child {
   min-height: 100vh;
+  padding-bottom: 40vh;
 }
 
 .cach-section > .container > .title {
@@ -459,8 +460,14 @@ button {
   border-radius: 50%;
 }
 
-.toggle-menu:hover {
+.toggle-menu:focus {
   background-color: rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 961px) {
+  .toggle-menu:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
 }
 
 .toggle-menu:before, .toggle-menu:after {
