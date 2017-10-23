@@ -1,8 +1,14 @@
+=bevel($size-bevel, $color-bg, $size-stripe, $color-stripe)
+    background: linear-gradient(135deg, transparent $size-bevel, $color-stripe $size-bevel, $color-stripe calc(#{$size-bevel} + #{$size-stripe}), $color-bg calc(#{$size-bevel} + #{$size-stripe}), $color-bg)
+    &::after
+      background: linear-gradient(135deg, $color-bg calc(#{$size-bevel} + 1px), transparent calc(#{$size-bevel} + 1px))
+
 .cach-section
   $size-stripe: 1rem
-  $size-bevel: 12rem
+  $size-bevel: 9rem
+  $size-bevel-desktop: 16rem
   $padding-vertical: 16rem
-  $padding-vertical-desktop: 12rem
+  $padding-vertical-desktop: 16rem
 
   color: $color-base
   margin: 0
@@ -66,25 +72,31 @@
   &.-oque
     $color-bg: $color-highlight
     $color-stripe: $color-base
-    background: linear-gradient(135deg, transparent $size-bevel, $color-stripe $size-bevel, $color-stripe calc(#{$size-bevel} + #{$size-stripe}), $color-bg calc(#{$size-bevel} + #{$size-stripe}), $color-bg)
-    &::after
-      background: linear-gradient(135deg, $color-bg calc(#{$size-bevel} + 1px), transparent calc(#{$size-bevel} + 1px))
+    +bevel($size-bevel, $color-bg, $size-stripe, $color-stripe)
+    +media-mediumup
+      +bevel($size-bevel-desktop, $color-bg, $size-stripe, $color-stripe)
+
   &.-como
     $color-bg: #fff
     $color-stripe: $color-base
-    background: linear-gradient(135deg, transparent $size-bevel, $color-stripe $size-bevel, $color-stripe calc(#{$size-bevel} + #{$size-stripe}), $color-bg calc(#{$size-bevel} + #{$size-stripe}), $color-bg)
-    &::after
-      background: linear-gradient(135deg, $color-bg calc(#{$size-bevel} + 1px), transparent calc(#{$size-bevel} + 1px))
+    +bevel($size-bevel, $color-bg, $size-stripe, $color-stripe)
+    +media-mediumup
+      +bevel($size-bevel-desktop, $color-bg, $size-stripe, $color-stripe)
+
   &.-quem
+    color: #fff
     $color-bg: $color-base
     $color-stripe: #fff
-    background: linear-gradient(135deg, transparent $size-bevel, $color-stripe $size-bevel, $color-stripe calc(#{$size-bevel} + #{$size-stripe}), $color-bg calc(#{$size-bevel} + #{$size-stripe}), $color-bg)
-    &::after
-      background: linear-gradient(135deg, $color-bg calc(#{$size-bevel} + 1px), transparent calc(#{$size-bevel} + 1px))
-    color: #fff
+    +bevel($size-bevel, $color-bg, $size-stripe, $color-stripe)
+    +media-mediumup
+      +bevel($size-bevel-desktop, $color-bg, $size-stripe, $color-stripe)
+
   &.-contato
     $color-bg: transparent
     $color-stripe: $color-highlight
-    background: linear-gradient(135deg, transparent $size-bevel, $color-stripe $size-bevel, $color-stripe calc(#{$size-bevel} + #{$size-stripe}), $color-bg calc(#{$size-bevel} + #{$size-stripe}), $color-bg)
+    +bevel($size-bevel, $color-bg, $size-stripe, $color-stripe)
+    +media-mediumup
+      +bevel($size-bevel-desktop, $color-bg, $size-stripe, $color-stripe)
+
     &::after
       content: none

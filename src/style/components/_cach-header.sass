@@ -28,3 +28,17 @@
     +media-mediumup
       > .toggle-menu
         display: none
+
+    > .cach-logo
+      background-image: url('../images/cachalotes.svg')
+      width: 10rem
+      height: 2rem
+      background-repeat: no-repeat
+      background-size: 100%
+      background-position: center
+
+  +media-mediumdown
+    &:not(.-small) > .container > .cach-logo
+      background-image: url('../images/cachalotes-logo.svg')
+      height: 3rem
+      width: 7.5rem
