@@ -231,6 +231,8 @@ html {
   font-family: "Bitter", serif;
   font-weight: 400;
   height: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 * {
@@ -311,6 +313,36 @@ main {
   background-size: calc(12000% / 5);
 }
 
+.cach-hero {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 960px) {
+  .cach-hero {
+    padding-left: 1.5em;
+    background-image: url("../images/tail-purple.svg");
+    background-size: auto 100%;
+    background-position: 0 center;
+    background-repeat: no-repeat;
+    width: calc(1.5em + 8ch);
+  }
+}
+
+@media (min-width: 961px) {
+  .cach-hero {
+    width: calc((2 * 10rem) + 11ch);
+    padding: 9rem 10rem;
+    background-image: url("../images/whale.svg");
+    background-size: 18rem auto;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+  }
+}
+
 .cach-mountain {
   position: fixed;
   top: 50%;
@@ -323,7 +355,7 @@ main {
   background-repeat: repeat;
   width: 100vw;
   height: 100vh;
-  z-index: 23;
+  z-index: 24;
   pointer-events: none;
 }
 
@@ -363,13 +395,6 @@ main {
   right: 0;
 }
 
-.cach-section.-home > .container > h1 {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
 .cach-section.-contato {
   min-height: 100vh;
   padding-bottom: 3rem;
@@ -382,7 +407,7 @@ main {
 }
 
 .cach-section.-home {
-  z-index: 20;
+  z-index: 26;
 }
 
 .cach-section.-oque {
@@ -390,7 +415,7 @@ main {
 }
 
 .cach-section.-como {
-  z-index: 24;
+  z-index: 26;
 }
 
 .cach-section.-quem {
@@ -398,7 +423,7 @@ main {
 }
 
 .cach-section.-contato {
-  z-index: 28;
+  z-index: 26;
 }
 
 .cach-section.-oque::after, .cach-section.-como::after, .cach-section.-quem::after, .cach-section.-contato::after {
@@ -491,6 +516,43 @@ main {
   color: #fff;
   position: relative;
   z-index: 40;
+}
+
+.cach-footer > .container {
+  display: flex;
+}
+
+@media (max-width: 960px) {
+  .cach-footer > .container {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 961px) {
+  .cach-footer > .container {
+    justify-content: flex-end;
+  }
+}
+
+.cach-footer > .container > .info {
+  padding-left: 5.5rem;
+  background-image: url("../images/tail-white.svg");
+  background-size: auto 100%;
+  background-position: 0 center;
+  background-repeat: no-repeat;
+}
+
+.cach-footer > .container > .info > p {
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+.cach-footer > .container > .info > p:first-child {
+  font-style: italic;
+}
+
+.cach-footer > .container > .info > p > b {
+  font-weight: 700;
 }
 
 .cach-header {

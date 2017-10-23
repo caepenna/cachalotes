@@ -8,3 +8,22 @@
 
   > .container
     @extend %container
+    display: flex
+    +media-mediumdown
+      justify-content: center
+    +media-mediumup
+      justify-content: flex-end
+
+    > .info
+      padding-left: 5.5rem
+      background-image: url('../images/tail-white.svg')
+      background-size: auto 100%
+      background-position: 0 center
+      background-repeat: no-repeat
+      > p
+        font-size: $font-size-deci
+        line-height: $line-height-centi
+        &:first-child
+          font-style: italic
+        > b
+          font-weight: 700

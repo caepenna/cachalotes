@@ -1,0 +1,25 @@
+.cach-hero
+  margin: 0
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+  +media-mediumdown
+    $padding-left: 1.5em
+    padding-left: $padding-left
+    background-image: url('../images/tail-purple.svg')
+    background-size: auto 100%
+    background-position: 0 center
+    background-repeat: no-repeat
+    width: calc(#{$padding-left} + 8ch)
+
+  +media-mediumup
+    $padding-left: 10rem
+    width: calc((2 * #{$padding-left}) + 11ch)
+    padding: 9rem $padding-left
+    background-image: url('../images/whale.svg')
+    background-size: 18rem auto
+    background-position: left bottom
+    background-repeat: no-repeat
+    
