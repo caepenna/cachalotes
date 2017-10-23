@@ -414,6 +414,7 @@ main {
 
 .cach-section.-contato > .container > .whale {
   width: 21rem;
+  max-width: 100%;
   height: 18rem;
   background-image: url("../images/whale.svg");
   background-size: 100%;
