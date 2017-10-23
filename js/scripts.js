@@ -38,6 +38,10 @@ $(document).ready(function(){
     $('.toggle-menu').removeClass('-x');
     $('.navigation-menu').removeClass('-open');
   });
+  $('.cach-logo').on('click', function(){
+    $('.toggle-menu').removeClass('-x');
+    $('.navigation-menu').removeClass('-open');
+  });
 });
 
 $(document).on('scroll', function() {
