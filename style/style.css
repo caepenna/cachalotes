@@ -21,10 +21,21 @@
 }
 
 .cach-section > .container, .cach-footer > .container, .cach-header > .container {
-  width: calc(40% + 12rem);
-  max-width: calc(100% - 3rem);
+  width: calc(40% + 16rem);
   margin-right: auto;
   margin-left: auto;
+}
+
+@media (max-width: 960px) {
+  .cach-section > .container, .cach-footer > .container, .cach-header > .container {
+    max-width: calc(100% - 3rem);
+  }
+}
+
+@media (min-width: 961px) {
+  .cach-section > .container, .cach-footer > .container, .cach-header > .container {
+    max-width: 64rem;
+  }
 }
 
 main {
@@ -246,6 +257,15 @@ body {
 
 main {
   background-color: #fff;
+}
+
+.cach-logo {
+  background-image: url("../images/cachalotes.svg");
+  width: 10rem;
+  height: 2rem;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
 }
 
 .cach-button {

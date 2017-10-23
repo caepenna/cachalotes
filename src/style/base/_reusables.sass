@@ -1,8 +1,11 @@
 %container
-  width: calc(40% + 12rem)
-  max-width: calc(100% - 3rem)
+  width: calc(40% + 16rem)
   margin-right: auto
   margin-left: auto
+  +media-mediumdown
+    max-width: calc(100% - 3rem)
+  +media-mediumup
+    max-width: 64rem
 
 =underline($offset: 0px, $width: 1px, $color: currentcolor)
   background: linear-gradient($color, $color)
