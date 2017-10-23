@@ -323,18 +323,18 @@ main {
 .cach-section {
   color: #639;
   margin: 0;
-  padding-top: 7.5rem;
+  padding-top: 8.5rem;
   min-height: 90vh;
-  padding-bottom: 36rem;
-  padding-top: 36rem;
+  padding-bottom: 16rem;
+  padding-top: 16rem;
   position: relative;
   z-index: 20;
 }
 
 @media (min-width: 961px) {
   .cach-section {
-    padding-bottom: 24rem;
-    padding-top: 24rem;
+    padding-bottom: 12rem;
+    padding-top: 12rem;
   }
 }
 
@@ -352,7 +352,7 @@ main {
 
 .cach-section:first-child > .container > .language-selection {
   position: absolute;
-  top: 5.5rem;
+  top: 6.5rem;
   right: 0;
 }
 
@@ -365,7 +365,8 @@ main {
 
 .cach-section:last-child {
   min-height: 100vh;
-  padding-bottom: 4.5rem;
+  padding-bottom: 3rem;
+  background-color: #f00;
 }
 
 .cach-section > .container > .title {
@@ -385,32 +386,32 @@ main {
 }
 
 .cach-section.-oque {
-  background: linear-gradient(135deg, transparent 24rem, #639 24rem, #639 calc(24rem + 1rem), #afeeee calc(24rem + 1rem), #afeeee);
+  background: linear-gradient(135deg, transparent 12rem, #639 12rem, #639 calc(12rem + 1rem), #afeeee calc(12rem + 1rem), #afeeee);
 }
 
 .cach-section.-oque::after {
-  background: linear-gradient(135deg, #afeeee calc(24rem + 1px), transparent calc(24rem + 1px));
+  background: linear-gradient(135deg, #afeeee calc(12rem + 1px), transparent calc(12rem + 1px));
 }
 
 .cach-section.-como {
-  background: linear-gradient(135deg, transparent 24rem, #639 24rem, #639 calc(24rem + 1rem), #fff calc(24rem + 1rem), #fff);
+  background: linear-gradient(135deg, transparent 12rem, #639 12rem, #639 calc(12rem + 1rem), #fff calc(12rem + 1rem), #fff);
 }
 
 .cach-section.-como::after {
-  background: linear-gradient(135deg, #fff calc(24rem + 1px), transparent calc(24rem + 1px));
+  background: linear-gradient(135deg, #fff calc(12rem + 1px), transparent calc(12rem + 1px));
 }
 
 .cach-section.-quem {
-  background: linear-gradient(135deg, transparent 24rem, #fff 24rem, #fff calc(24rem + 1rem), #639 calc(24rem + 1rem), #639);
+  background: linear-gradient(135deg, transparent 12rem, #fff 12rem, #fff calc(12rem + 1rem), #639 calc(12rem + 1rem), #639);
   color: #fff;
 }
 
 .cach-section.-quem::after {
-  background: linear-gradient(135deg, #639 calc(24rem + 1px), transparent calc(24rem + 1px));
+  background: linear-gradient(135deg, #639 calc(12rem + 1px), transparent calc(12rem + 1px));
 }
 
 .cach-section.-contato {
-  background: linear-gradient(135deg, transparent 24rem, #afeeee 24rem, #afeeee calc(24rem + 1rem), transparent calc(24rem + 1rem), transparent);
+  background: linear-gradient(135deg, transparent 12rem, #afeeee 12rem, #afeeee calc(12rem + 1rem), transparent calc(12rem + 1rem), transparent);
 }
 
 .cach-section.-contato::after {
@@ -428,7 +429,7 @@ main {
 
 .cach-header {
   background-color: #639;
-  height: 4.5rem;
+  height: 5.5rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -441,7 +442,7 @@ main {
 }
 
 .cach-header.-small {
-  height: 3rem;
+  height: 4rem;
 }
 
 .cach-header > .container {
@@ -574,7 +575,7 @@ main {
 }
 
 .toggle-menu.-x {
-  transform: rotate(180deg);
+  transform: rotate(-180deg);
 }
 
 .toggle-menu.-x:before, .toggle-menu.-x:after {
