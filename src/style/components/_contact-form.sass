@@ -1,0 +1,40 @@
+.contact-form
+  margin-top: $space-base
+  display: flex
+  flex-direction: column
+  align-items: flex-end
+
+  > * + *
+    margin-top: $space-base
+
+  > button
+    margin-left: 0
+    margin-right: 0
+    width: 10rem
+
+  input,
+  textarea
+    width: 100%
+    position: relative
+    background-image: url('../images/line.svg')
+    // background: linear-gradient(transparent calc(#{$line-height-centi} - 1px), $color-base calc(#{$line-height-centi} - 1px))
+    background-size: $line-height-centi
+    font-size: $font-size-deci
+    line-height: $line-height-centi
+    +media-mediumup
+      // background: linear-gradient(transparent calc(#{$line-height-base} - 1px), $color-base calc(#{$line-height-base} - 1px))
+      background-size: $line-height-base
+      font-size: $font-size-base
+      line-height: $line-height-base
+
+  input
+    height $line-height-centi
+    +media-mediumup
+      height: $line-height-base
+
+  textarea
+    resize: none
+    height: 5 * $line-height-centi
+    +media-mediumup
+      height: 5 * $line-height-base
+  

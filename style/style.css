@@ -799,3 +799,56 @@ main {
 .language-selection > a.-active {
   color: #639;
 }
+
+.contact-form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.contact-form > * + * {
+  margin-top: 2rem;
+}
+
+.contact-form > button {
+  margin-left: 0;
+  margin-right: 0;
+  width: 10rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  position: relative;
+  background-image: url("../images/line.svg");
+  background-size: 2rem;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+@media (min-width: 961px) {
+  .contact-form input,
+  .contact-form textarea {
+    background-size: 3rem;
+    font-size: 1.5rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width: 961px) {
+  .contact-form input {
+    height: 3rem;
+  }
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 10rem;
+}
+
+@media (min-width: 961px) {
+  .contact-form textarea {
+    height: 15rem;
+  }
+}
