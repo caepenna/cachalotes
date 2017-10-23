@@ -78,13 +78,13 @@ h3 {
 }
 
 h1 {
-  line-height: 3rem;
+  line-height: 3.5rem;
   font-size: 2.8rem;
 }
 
 @media (min-width: 961px) {
   h1 {
-    line-height: 4rem;
+    line-height: 5rem;
     font-size: 4.1rem;
   }
 }
@@ -247,12 +247,12 @@ button {
   margin-top: 1rem;
 }
 
-body, main {
-  margin: 0;
-}
-
 body {
   background-color: #639;
+}
+
+body, body > * {
+  margin: 0;
 }
 
 main {
@@ -311,6 +311,22 @@ main {
   background-size: calc(12000% / 5);
 }
 
+.cach-mountain {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: rotate(-45deg) scale(10);
+  transform-origin: 50% 0;
+  background-image: url("../images/texture.png");
+  background-size: 40px;
+  background-position: center;
+  background-repeat: repeat;
+  width: 100vw;
+  height: 100vh;
+  z-index: 23;
+  pointer-events: none;
+}
+
 .cach-section {
   color: #639;
   margin: 0;
@@ -329,32 +345,32 @@ main {
   }
 }
 
-.cach-section:first-child {
+.cach-section.-home {
   padding-top: 0;
   padding-bottom: 0;
   height: 90vh;
   background-size: 999vh;
 }
 
-.cach-section:first-child > .container {
+.cach-section.-home > .container {
   position: relative;
   height: 100%;
 }
 
-.cach-section:first-child > .container > .language-selection {
+.cach-section.-home > .container > .language-selection {
   position: absolute;
   top: 6.5rem;
   right: 0;
 }
 
-.cach-section:first-child > .container > h1 {
+.cach-section.-home > .container > h1 {
   margin: 0;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.cach-section:last-child {
+.cach-section.-contato {
   min-height: 100vh;
   padding-bottom: 3rem;
   background-color: #f00;
@@ -363,6 +379,26 @@ main {
 .cach-section > .container > .title {
   font-weight: 400;
   font-style: italic;
+}
+
+.cach-section.-home {
+  z-index: 20;
+}
+
+.cach-section.-oque {
+  z-index: 22;
+}
+
+.cach-section.-como {
+  z-index: 24;
+}
+
+.cach-section.-quem {
+  z-index: 26;
+}
+
+.cach-section.-contato {
+  z-index: 28;
 }
 
 .cach-section.-oque::after, .cach-section.-como::after, .cach-section.-quem::after, .cach-section.-contato::after {

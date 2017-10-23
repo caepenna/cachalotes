@@ -23,7 +23,7 @@
     padding-bottom: $padding-vertical-desktop
     padding-top: $padding-vertical-desktop
     
-  &:first-child
+  &.-home
     padding-top: 0
     padding-bottom: 0
     height: 90vh
@@ -44,7 +44,7 @@
         top: 50%
         transform: translateY(-50%)
 
-  &:last-child
+  &.-contato
     min-height: 100vh
     padding-bottom: $space-deca
     background-color: #f00
@@ -55,6 +55,17 @@
     > .title
       font-weight: 400
       font-style: italic
+
+  &.-home
+    z-index: 20
+  &.-oque
+    z-index: 22
+  &.-como
+    z-index: 24
+  &.-quem
+    z-index: 26
+  &.-contato
+    z-index: 28
 
   &.-oque,
   &.-como,
