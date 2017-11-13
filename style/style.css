@@ -859,3 +859,8 @@ a[href^="tel:"] {
     height: 15rem;
   }
 }
+
+.form-elements {
+  background-color: #fff;
+  padding: 4.5rem;
+}
